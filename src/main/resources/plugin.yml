@@ -1,0 +1,7 @@
+name: VoidTeleport
+version: '${project.version}'
+main: com.zubovdev.voidteleport.VoidTeleport
+api-version: 1.18
+prefix: VoidTeleport
+authors: [ zubovdev ]
+description: This plugin adds ability to teleport player to specific location, when it's felt into the void.
