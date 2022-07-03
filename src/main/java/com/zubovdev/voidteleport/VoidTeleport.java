@@ -15,13 +15,8 @@ public final class VoidTeleport extends JavaPlugin {
     public void onEnable() {
         getLogger().log(Level.INFO, "Plugin enabled!");
 
-        // Setup config
-        getConfig().options().copyDefaults(true);
-        saveDefaultConfig();
-
         // Initialize config.
         Config.init();
-        Config.save();
 
         this.registerDamageEvent();
     }
