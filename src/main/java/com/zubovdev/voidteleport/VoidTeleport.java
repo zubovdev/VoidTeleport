@@ -11,9 +11,13 @@ import java.util.logging.Level;
 public final class VoidTeleport extends JavaPlugin {
     public static final String PluginName = "VoidTeleport";
 
+    private static VoidTeleport plugin;
+
     @Override
     public void onEnable() {
         getLogger().log(Level.INFO, "Plugin enabled!");
+
+        plugin = this;
 
         // Initialize config.
         Config.init();
@@ -33,5 +37,9 @@ public final class VoidTeleport extends JavaPlugin {
         damageListener.updateWorlds((ArrayList<HashMap<String, Object>>) Config.get().get("worlds"));
 
         getServer().getPluginManager().registerEvents(damageListener, this);
+    }
+
+    public static VoidTeleport getPlugin() {
+        return plugin;
     }
 }
