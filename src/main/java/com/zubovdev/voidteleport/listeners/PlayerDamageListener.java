@@ -1,5 +1,6 @@
 package com.zubovdev.voidteleport.listeners;
 
+import com.zubovdev.voidteleport.particles.Spiral;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.World;
@@ -52,6 +53,9 @@ public class PlayerDamageListener implements Listener {
 
         // Teleporting player to a spawn location
         player.teleport(spawnLocation);
+
+        // Spawn spiral player particles.
+        Spiral.spawn(player);
     }
 
     @SuppressWarnings("unchecked")
